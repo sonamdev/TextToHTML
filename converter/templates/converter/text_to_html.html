@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text to HTML Converter</title>
+</head>
+<body>
+    <h1>Text to HTML Converter</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Convert">
+    </form>
+    <h2>Converted HTML:</h2>
+    <div>{{ converted_html|safe }}</div>
+</body>
+</html>
